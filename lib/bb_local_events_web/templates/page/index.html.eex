@@ -23,27 +23,29 @@
       var events = JSON.parse(json);
 
       events.map(evt => {
-        var street = evt.match(/(ul\. [A-Za-z0-9zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{1,})/)[0];
+        var street = evt.match(/(ul\. [A-Za-z0-9zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{1,})/);
 
-        fetch(`https://nominatim.openstreetmap.org/search?q="${street}, Bielsko-Biała"&format=json`)
-          .then(resp => resp.json())
-          .then(json => {
-            console.log(json)
+        if (street) {
+          fetch(`https://nominatim.openstreetmap.org/search?q="${street[0]}, Bielsko-Biała"&format=json`)
+            .then(resp => resp.json())
+            .then(json => {
+              console.log(json)
 
-            if (json.length > 0) {
-              var lat = json[0].lat;
-              var lng = json[0].lon;
+              if (json.length > 0) {
+                var lat = json[0].lat;
+                var lng = json[0].lon;
 
-              var circle = L.circle([lat, lng], {
-                color: 'red',
-                fillColor: '#f03',
-                fillOpacity: 0.5,
-                radius: 500
-              }).addTo(mymap);
+                var circle = L.circle([lat, lng], {
+                  color: 'red',
+                  fillColor: '#f03',
+                  fillOpacity: 0.5,
+                  radius: 500
+                }).addTo(mymap);
 
-              circle.bindPopup(evt);
-            }
-          })
+                circle.bindPopup(evt);
+              }
+            })
+        }
       })
     });
 </script>
