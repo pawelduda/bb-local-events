@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :bb_local_events, BbLocalEvents.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "master",
+  password: "secret",
   database: "bb_local_events_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
