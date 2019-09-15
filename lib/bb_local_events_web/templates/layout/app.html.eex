@@ -41,6 +41,9 @@
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <%= render @view_module, @view_template, assigns %>
     </main>
+    <footer class="text-center pb-8 border-t border-gray-200 pt-8 text-xs text-gray-700 bg-teal-500">
+      <div class="text-white">Autor: Paweł Duda</div>
+    </footer>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
