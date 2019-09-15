@@ -5,11 +5,33 @@
 </div>
 
 <script>
-  var events;
-
   fetch('/evts')
     .then(resp => resp.json())
-    .then(json => events = JSON.parse(json));
+    .then(json => {
+      var events = JSON.parse(json);
+
+      events.map(evt => {
+        var street = evt.match(/(ul\. [A-Za-z0-9zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{1,})/)[0];
+
+        fetch(`https://nominatim.openstreetmap.org/search?q="${street}, Bielsko-Biała"&format=json`)
+          .then(resp => resp.json())
+          .then(json => {
+            console.log(json)
+
+            if (json.length > 0) {
+              var lat = json[0].lat;
+              var lng = json[0].lon;
+
+              var circle = L.circle([lat, lng], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5,
+                radius: 500
+              }).addTo(mymap);
+            }
+          })
+      })
+    });
 
   var BB_COORDS = {
     LAT: 49.8213,
@@ -29,10 +51,4 @@
 
   <%# var marker = L.marker([51.5, -0.09]).addTo(mymap); %>
 
-  <%# var circle = L.circle([49.5, -0.11], { %>
-  <%#   color: 'red', %>
-  <%#   fillColor: '#f03', %>
-  <%#   fillOpacity: 0.5, %>
-  <%#   radius: 500 %>
-  <%# }).addTo(mymap); %>
 </script>
