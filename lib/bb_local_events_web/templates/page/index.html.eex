@@ -5,10 +5,18 @@
 </div>
 
 <script>
+  var events;
+
+  fetch('/evts')
+    .then(resp => resp.json())
+    .then(json => events = JSON.parse(json));
+
   var BB_COORDS = {
     LAT: 49.8213,
     LNG: 19.0434
   };
+
+  <%# var BIELSKIE_DROGI_POSTS_URL = 'https://m.facebook.com/bielskiedrogi/posts'; %>
 
   var mymap = L.map('bb-map').setView([BB_COORDS.LAT, BB_COORDS.LNG], 13);
 

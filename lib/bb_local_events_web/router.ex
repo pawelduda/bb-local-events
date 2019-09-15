@@ -18,6 +18,7 @@ defmodule BbLocalEventsWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/evts", EvtController, :index
   end
 
   # Other scopes may use custom stacks.
