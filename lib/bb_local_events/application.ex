@@ -9,7 +9,7 @@ defmodule BbLocalEvents.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      BbLocalEvents.Repo,
+      # BbLocalEvents.Repo,
       # Start the endpoint when the application starts
       BbLocalEventsWeb.Endpoint
       # Starts a worker by calling: BbLocalEvents.Worker.start_link(arg)
