@@ -47,7 +47,6 @@ defmodule BbLocalEvents.MixProject do
 
       # Added by programmers
       {:phoenix_live_view, "~> 0.2.0"},
-      {:meeseeks, "~> 0.13.1"},
       {:httpoison, "~> 1.5"},
     ]
   end
