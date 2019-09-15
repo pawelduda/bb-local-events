@@ -19,6 +19,8 @@ defmodule BbLocalEventsWeb.Router do
 
     get "/", PageController, :index
     get "/evts", EvtController, :index
+
+    get "/about", AboutController, :show
   end
 
   # Other scopes may use custom stacks.
