@@ -61,7 +61,9 @@ config :bb_local_events, BbLocalEventsWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/bb_local_events_web/{live,views}/.*(ex)$",
-      ~r"lib/bb_local_events_web/templates/.*(eex)$"
+      ~r"lib/bb_local_events_web/templates/.*(eex)$",
+
+      ~r{lib/bb_local_events_web/live/.*(ex)$}
     ]
   ]
 

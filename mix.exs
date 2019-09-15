@@ -33,6 +33,7 @@ defmodule BbLocalEvents.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      # Added by generator
       {:phoenix, "~> 1.4.10"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
@@ -42,7 +43,10 @@ defmodule BbLocalEvents.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+
+      # Added by programmers
+      {:phoenix_live_view, "~> 0.2.0"}
     ]
   end
 
