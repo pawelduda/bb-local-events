@@ -1,5 +1,25 @@
 # BbLocalEvents
 
+### 🏆 4th place on local BB Days 4 IT Hackathon (solo coding)
+
+## Demo
+
+https://bb-local-events.herokuapp.com/
+
+## Tech stack
+
+Elixir (Phoenix Framework)
+
+Vanilla JS Framework
+
+Tailwind CSS
+
+OpenStreetMap (with Leaflet.js)
+
+Heroku (for deployment)
+
+## Setting up the project
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
