@@ -1,4 +1,6 @@
-# BbLocalEvents
+# BB Local Events
+
+This app takes events (will take them once Facebook verifies my app, maybe in a week, maybe never) from the "Bielskie Drogi" fanpage, which reports on local events/road accidents/emergency situations. It parses their posts for location (street name, etc.), then puts them on a map. Simple and useful.
 
 ### 🏆 4th place on local BB Days 4 IT Hackathon (solo coding)
 
