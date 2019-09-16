@@ -4,6 +4,8 @@ This app takes events (will take them once Facebook verifies my app, maybe in a 
 
 ### 🏆 4th place on local BB Days 4 IT Hackathon (solo coding)
 
+https://www.bbdays4.it/
+
 ## Demo
 
 https://bb-local-events.herokuapp.com/
