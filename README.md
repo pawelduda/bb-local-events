@@ -8,15 +8,11 @@ https://bb-local-events.herokuapp.com/
 
 ## Tech stack
 
-Elixir (Phoenix Framework)
-
-Vanilla JS Framework
-
-Tailwind CSS
-
-OpenStreetMap (with Leaflet.js)
-
-Heroku (for deployment)
+  * Elixir (Phoenix Framework)
+  * Vanilla JS Framework
+  * Tailwind CSS
+  * OpenStreetMap (with Leaflet.js)
+  * Heroku (for deployment)
 
 ## Setting up the project
 
